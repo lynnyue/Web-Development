@@ -1,0 +1,25 @@
+<div class="row">
+
+  <style type="text/css">
+   body { background: rgb(255, 240, 245) !important; }
+  </style>
+
+  <div class="col-sm-4 my-4">
+    <%= link_to image_tag('https://s3.amazonaws.com/ionic-marketplace/gooey-menu-starter-app/icon.png', :class => "img-fluid"), "/poses/new" %>
+  </div>
+
+	<% Pose.all.order('created_at desc').each do |pose| %>
+
+		<div class="col-sm-4 my-4 text-center">
+      <% pose_url = (pose.pose_url.present? ? pose.pose_url : 'https://fitnessgoals.com/wp-content/uploads/2016/06/yoga-quotes.jpg') %>
+      		<%= link_to image_tag(pose_url, :class => "img-fluid"), "/poses/#{pose.id}" %>
+
+      <p>
+        <%= link_to "[Delete]", "/poses/#{pose.id}", method: "delete" %>
+        <%= link_to "[Edit]", "/poses/#{pose.id}/edit" %>
+      </p>
+    </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,20 @@
+<h1>Add a Pose</h1>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <%= form_tag "/poses" do %>
+
+      <p>Title: <input name="title" type="text" autofocus class="form-control"></p>
+      <p>Pose Type: <input name="pose_type" type="text" class="form-control"></p>
+      <p>Benefit: <input name="benefit" type="text" class="form-control"></p>
+      <p>Level: <input name="level" type="text" class="form-control"></p>
+      <p>Anatomy: <input name="anatomy" type="text" class="form-control"></p>
+      <p>Picture: <input name="pose_url" type="text" class="form-control"></p>
+      <p>Step: <input name="step" type="text" class="form-control"></p>
+      <button class="btn btn-primary">Add Pose</button>
+
+    <% end %>
+
+  </div>
+</div>

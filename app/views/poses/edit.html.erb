@@ -1,0 +1,24 @@
+<% pose = Pose.find_by(id: params["id"]) %>
+
+<h1>Editing <%= pose.title %></h1>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <%= form_tag "/poses/#{pose.id}", method: "patch" do %>
+
+      <p>Title: <input value="<%= pose.title %>" name="title" type="text" autofocus class="form-control"></p>
+      <p>Type: <input value="<%= pose.pose_type %>"  name="pose_type" type="text" class="form-control"></p>
+      <p>Benefit: <input value="<%= pose.benefit %>" name="benefit" type="text" class="form-control"></p>
+      <p>Level: <input value="<%= pose.level %>"  name="level" type="text" class="form-control"></p>
+      <p>Anatomy: <input value="<%= pose.anatomy %>"  name="anatomy" type="text" class="form-control"></p>
+      <p>Picture: <input value="<%= pose.pose_url %>" name="pose_url" type="text" class="form-control"></p>
+      <p>Step: <input value="<%= pose.step %>"  name="step" type="text" class="form-control"></p>
+
+
+      <button class="btn btn-primary">Update Pose</button>
+
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<style type="text/css">
+   body { background: rgb(255,245,238) !important; }
+  </style>
+
+
+<% pose = Pose.find_by(id: params["id"]) %>
+
+<div class="row">
+  <div class="col">
+    <h1 style = "color: rgb(169,169,169); font-family: Charter"><%= pose.title %></h1> 
+  </div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6">
+    	<%= image_tag pose.pose_url, class: 'img-fluid mb-3'%>
+  	</div>
+
+  	<div class="col-sm-6">
+    	<p style="font-family: Calibri; font-size:130%"><%= pose.pose_type %> Yoga Poses<br> Intro: <%= pose.benefit %> <br> Level: <%= pose.level%> <br> Anatomy: <%= pose.anatomy %></p>
+  	</div>
+</div>
+
+<div class="row">
+    	<p style="font-family: Goudy Old Style; font-size:130%"><%= pose.step %> </p>
+</div>
+

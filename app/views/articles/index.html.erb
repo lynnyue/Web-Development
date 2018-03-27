@@ -1,0 +1,20 @@
+<div class="row">
+
+  <style type="text/css">
+   body { background: rgb(207, 169, 171) !important; }
+  </style>
+
+
+  <% Article.all.order('created_at desc').each do |article| %>
+
+    <div class="col-sm-4 my-3 text-center">
+      <p style = "color: rgb(219,112,147); font-family: Mistral ; font-size: 150%"> <%= article.category %> </p>
+      <%= link_to image_tag(article.pic_url, :class => "img-fluid"), article.content_url %>
+      <p style = "font-family: Georgia ; font-size: 110%">
+        <%= link_to article.title, article.content_url %>
+      </p>
+    </div>
+
+  <% end %>
+
+</div>

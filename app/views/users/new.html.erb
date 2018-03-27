@@ -1,0 +1,17 @@
+<h1>Sign up and Start your yoga journey with me!</h1>
+
+<div class="row">
+  <div class="col-sm-4">
+
+    <%= form_tag "/users" do %>
+
+      <p>User name: <input name="user_name" type="text" autofocus class="form-control"></p>
+      <p>Email: <input name="email" type="text" autofocus class="form-control"></p>
+      <p>Password: <input name="password" type="text" autofocus class="form-control"></p>
+
+      <button class="btn btn-primary">Add New User</button>
+
+    <% end %>
+
+  </div>
+</div>
