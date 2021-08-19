@@ -10,8 +10,6 @@ For my final project, I built a yoga blog — Lynn Yoga. The motivation for buil
 2. Resources: All of my models have full /partial resources. Pose and User have full seven resources — an index page that retrieves a list of the objects in that model, a show page that retrieves the details of a single object, each object can be edited and deleted. Article and Video are not allowed for modification by users. Thus they both only have partial resource. They both only have one get action for the index page to retrieve a list of the objects in the model.
 
 3. User authentication and authorization: I implemented user login, sign up, log out function by including session hash. User password is stored using a one-way hash—the bcrypt algorithm.
-You can test the functionality by logging into account:
-email: orin.xie@gmail.com password:000 
 
 4. Website Navigation:
 There are 10 sections in navbar. I’ll briefly go through all of them from left to right.
